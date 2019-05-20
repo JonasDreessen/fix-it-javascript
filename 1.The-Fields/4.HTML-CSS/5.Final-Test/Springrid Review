@@ -1,12 +1,14 @@
 ### Perfection is not a detail
 - [ ] All buttons and links work
         Packages link in header does not work
-- [ ] All elements work and are complete (menu, lists, images, ...)
-- [ ] Everything on the page has a function, a reason to be there
+- [x] All elements work and are complete (menu, lists, images, ...)
+- [x] Everything on the page has a function, a reason to be there
 - [ ] No dead links
 - [ ] English and dutch are not mixed
 - [ ] No spelling errors
+        Spelling and grammar errors in every section
 - [ ] No grammar errors
+        Spelling and grammar errors in every section
 - [ ] The website is deployed somewhere
 - [ ] Everything is relevant (no image of a barber on the website of a baker)
         Photos in testimonial could be more professional
