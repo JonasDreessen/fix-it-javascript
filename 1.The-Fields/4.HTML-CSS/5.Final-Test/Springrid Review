@@ -1,7 +1,8 @@
 ### Perfection is not a detail
 - [ ] All buttons and links work
         Packages link in header does not work, footer social media buttons do not work
-- [x] All elements work and are complete (menu, lists, images, ...)
+- [ ] All elements work and are complete (menu, lists, images, ...)
+        No header tag
 - [x] Everything on the page has a function, a reason to be there
 - [ ] No dead links
         Packages link in header does not work
@@ -39,10 +40,10 @@
 ### Style
 - [ ] Black is almost black but not #000
 - [ ] White is almost white but not #fff
-- [ ] The website is not an ugly color mess
-- [ ] The styling is consistent
-- [ ] It is not four totally different pages thrown together
-- [ ] Everything works even if you are colorblind
+- [x] The website is not an ugly color mess
+- [x] The styling is consistent
+- [x] It is not four totally different pages thrown together
+- [x] Everything works even if you are colorblind
 
 
 ### Not everyone has free 4G aka speed matters
@@ -70,22 +71,22 @@
 - [ ] Github topics have been filled in
 
 ### Readme but also writeme
-- [ ] No license text in the readme, put it in a seperate file
-- [ ] But a license is defined
+- [x] No license text in the readme, put it in a seperate file
+- [x] But a license is defined
 - [ ] And it is included in the readme by name or a quick summary
-- [ ] The readme says who made it
-- [ ] The readme says why they made it
-- [ ] The readme explains what this repo/project is
-- [ ] The readme explains why it is on github
-- [ ] The readme links to the preview
-- [ ] The readme contains a nice image
-- [ ] The readme does not contain the readme/license of dependencies, libraries, templates
-- [ ] If needed they are included in the repo and are mentioned in the readme
-- [ ] The readme has a markdown title
-- [ ] The readme is divided in sections
-- [ ] The readme is fun to read
-- [ ] The readme looks good
-- [ ] The readme is clear, even for someone that has no idea what is going on
+- [x] The readme says who made it
+- [x] The readme says why they made it
+- [x] The readme explains what this repo/project is
+- [x] The readme explains why it is on github
+- [x] The readme links to the preview
+- [x] The readme contains a nice image
+- [x] The readme does not contain the readme/license of dependencies, libraries, templates
+- [x] If needed they are included in the repo and are mentioned in the readme
+- [x] The readme has a markdown title
+- [x] The readme is divided in sections
+- [x] The readme is fun to read
+- [x] The readme looks good
+- [x] The readme is clear, even for someone that has no idea what is going on
 
 ### I'm So Meta, Even This Acronym
 - [ ] Social media sharing meta tags are correct
