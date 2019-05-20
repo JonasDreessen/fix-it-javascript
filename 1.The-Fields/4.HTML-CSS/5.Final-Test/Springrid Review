@@ -103,13 +103,14 @@
 - [ ] (Google) analytics
 
 ### Perform all the tests
-- [ ] Lighthouse
+- [x] Lighthouse
+        SEO very good, the rest not so good
 - [ ] W3C validator
 - [ ] Monkey test
 
 ### Putting the antics back in semantics (but only for the html)
 - [ ] The html is semanticly correct
-- [ ] Navigation is in a nav
+- [x] Navigation is in a nav
 - [ ] Lists use list tags
 - [ ] H tags are used to signal importance
 - [ ] No div is used where another element is available
@@ -120,20 +121,24 @@
 - [ ] All images have an alt attribute and a title
 
 ### Just kidding CSS deserves some love too
-- [ ] CSS follows the DRY principle
-- [ ] The CSS does not contain conflicting selectors (multiple definition for the same class/id)
-- [ ] There is no use of !important where it can be avoided
-- [ ] The page is responsive
+- [x] CSS follows the DRY principle
+- [x] The CSS does not contain conflicting selectors (multiple definition for the same class/id)
+- [x] There is no use of !important where it can be avoided
+- [x] The page is responsive
 
 
 ### Thermometer goes WHERE???
-- [ ] Your own style is included after the style of frameworks
-- [ ] Script tags are put at the end of the body or in the head with async/defer if possible
+- [x] Your own style is included after the style of frameworks
+- [x] Script tags are put at the end of the body or in the head with async/defer if possible
 
 
 ### Errors are to be avoided
 - [ ] No http resources are used on an https website
-- [ ] The console shows no errors
+        Mixed Content: The page at 'https://jonasdreessen.github.io/Springrid/' was loaded over HTTPS,
+        but requested an insecure image 'http://www.v-formation.be/wp-content/uploads/2015/12/Teambuilding-June-28-Ghent-22.jpg'.
+        This content should also be served over HTTPS.
+- [x] The console shows no errors
+        Above error is error (http)
 
 Mixed Content: The page at 'https://jonasdreessen.github.io/Springrid/' was loaded over HTTPS, 
 but requested an insecure image 'http://www.v-formation.be/wp-content/uploads/2015/12/Teambuilding-June-28-Ghent-22.jpg'. 
