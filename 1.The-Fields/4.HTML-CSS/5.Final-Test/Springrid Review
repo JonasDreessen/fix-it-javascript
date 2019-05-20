@@ -52,10 +52,10 @@
 - [x] Pictures are not pixelated
 
 ### A company wants to be found/SEO	
-- [ ] All the keywords this company wants to be found on are on the page 
-- [ ] Page has an H1 tag
-- [ ] Page has keyword meta tags
-- [ ] Page has a title with the keywords in
+- [x] All the keywords this company wants to be found on are on the page 
+- [x] Page has an H1 tag
+- [x] Page has keyword meta tags
+- [x] Page has a title with the keywords in
 - [ ] Page loads fast
  
 ### Keep your workspace clean
@@ -67,6 +67,7 @@
 
 ### Git(hub) is what you make it
 - [ ] All commits use the correct format (if applied this commit will...)
+        Half do, half don't. The (if applied this commit will...) is implied and should not be in the commit message. Most newer commits are in past-tense.
 - [ ] A github description has been filled in
 - [ ] A github website has been filled in
 - [ ] Github topics have been filled in
@@ -100,14 +101,15 @@
 - [x] Author is defined
 
 ### Data is the new oil
-- [ ] (Google) analytics
+- [x] (Google) analytics
 
 ### Perform all the tests
 - [x] Lighthouse
         SEO very good, the rest not so good
-- [ ] W3C validator
+- [x] W3C validator
         Meta charset, meta name doubled. Euro sign € in the meta tag name. Div error class btn without quotation marks. Within nav tag there are open elements (line 86). Dropdown and navigation classes missing quotations. Title tag has to be in HEAD of document, not body. Bad values for href tags. Line 445 end tag with open elements (p tag has to end after 'a' closing tag). Line 471 & 484 there is an 'a' tag within an 'a' tag. Line 164 id tag not in quotations. Line 55 aria label has to go to existing class tag in document.
-- [ ] Monkey test
+- [x] Monkey test
+        Meta tag for viewport; shrink to fit is not recognized and ignored.
 
 ### Putting the antics back in semantics (but only for the html)
 - [ ] The html is semanticly correct
