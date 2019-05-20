@@ -90,14 +90,14 @@
 - [x] The readme is clear, even for someone that has no idea what is going on
 
 ### I'm So Meta, Even This Acronym
-- [ ] Social media sharing meta tags are correct
-- [ ] Keywords meta tag
-- [ ] Description meta tag
-- [ ] Title of the page is included
-- [ ] Favicon is included
+- [x] Social media sharing meta tags are correct
+- [x] Keywords meta tag
+- [x] Description meta tag
+- [x] Title of the page is included
+- [x] Favicon is included
 - [ ] Responsive meta tag is included
-- [ ] Charset is defined
-- [ ] Author is defined
+- [x] Charset is defined
+- [x] Author is defined
 
 ### Data is the new oil
 - [ ] (Google) analytics
@@ -106,10 +106,12 @@
 - [x] Lighthouse
         SEO very good, the rest not so good
 - [ ] W3C validator
+        Meta charset, meta name doubled. Euro sign € in the meta tag name. Div error class btn without quotation marks. Within nav tag there are open elements (line 86). Dropdown and navigation classes missing quotations. Title tag has to be in HEAD of document, not body. Bad values for href tags. Line 445 end tag with open elements (p tag has to end after 'a' closing tag). Line 471 there is an 'a' tag within an 'a' tag. 
 - [ ] Monkey test
 
 ### Putting the antics back in semantics (but only for the html)
 - [ ] The html is semanticly correct
+        Multiple iterations of HTML tags/meta tags
 - [x] Navigation is in a nav
 - [ ] Lists use list tags
 - [ ] H tags are used to signal importance
