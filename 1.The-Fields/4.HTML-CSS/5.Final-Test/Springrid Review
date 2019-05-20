@@ -1,8 +1,7 @@
 ### Perfection is not a detail
 - [ ] All buttons and links work
         Packages link in header does not work, footer social media buttons do not work
-- [ ] All elements work and are complete (menu, lists, images, ...)
-        No header tag
+- [x] All elements work and are complete (menu, lists, images, ...)
 - [x] Everything on the page has a function, a reason to be there
 - [ ] No dead links
         Packages link in header does not work
@@ -96,7 +95,7 @@
 - [x] Description meta tag
 - [x] Title of the page is included
 - [x] Favicon is included
-- [ ] Responsive meta tag is included
+- [x] Responsive meta tag is included
 - [x] Charset is defined
 - [x] Author is defined
 
@@ -115,14 +114,16 @@
 - [ ] The html is semanticly correct
         Multiple iterations of HTML tags/meta tags
 - [x] Navigation is in a nav
-- [ ] Lists use list tags
-- [ ] H tags are used to signal importance
-- [ ] No div is used where another element is available
+- [x] Lists use list tags
+- [x] H tags are used to signal importance
+- [x] No div is used where another element is available
 - [ ] No span is used where another element is available
-- [ ] No inline styling is put on any element
-- [ ] Id's are only used once
-- [ ] The same 'type' of elements have the same classes
+- [x] No inline styling is put on any element
+- [x] Id's are only used once
+- [x] The same 'type' of elements have the same classes
+        These are ok but I do notice that your HTML is set to lang="en" and some of your class names are in NL.
 - [ ] All images have an alt attribute and a title
+        No titles on many
 
 ### Just kidding CSS deserves some love too
 - [x] CSS follows the DRY principle
@@ -133,7 +134,8 @@
 
 ### Thermometer goes WHERE???
 - [x] Your own style is included after the style of frameworks
-- [x] Script tags are put at the end of the body or in the head with async/defer if possible
+- [ ] Script tags are put at the end of the body or in the head with async/defer if possible
+        JavaScript script has to be at the end of the body.
 
 
 ### Errors are to be avoided
