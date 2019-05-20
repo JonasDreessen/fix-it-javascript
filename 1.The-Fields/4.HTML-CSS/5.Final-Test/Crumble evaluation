@@ -116,7 +116,7 @@ A good requirement for this list is something that people should have been doing
 - [ ] All commits use the correct format (if applied this commit will...)
       (50% are good)
 - [X] A github description has been filled in
-- [ ] A github website has been filled in
+- [X] A github website has been filled in
       (no environment/deployment)
 - [ ] Github topics have been filled in
 
@@ -169,7 +169,7 @@ A good requirement for this list is something that people should have been doing
       (A <span> element used to color a part of a text)
 - [ ] No inline styling is put on any element
       (style in header image and google maps snippet)
-- [ ] Id's are only used once
+- [X] Id's are only used once
       (history, product used multiple times)
 - [X] The same 'type' of elements have the same classes
 - [x] All images have an alt attribute and a title
