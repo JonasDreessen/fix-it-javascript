@@ -25,17 +25,17 @@
 
 
 ### Text life matters aka typography is real
-- [ ] Some words are bolded
-- [ ] Some words are italic
-- [ ] Some words have a different color
-- [ ] We aren't using a default font, cause it's not 2004
-- [ ] Contrast is not too low
-- [ ] Typographic hierachy is correct
-- [ ] Text has a clear intro, middle, conclusion
-- [ ] Intro, middle, conclusion is style correctly
-- [ ] Headline font is a headline font
-- [ ] Body text font is a body text font
-- [ ] The text on the page has a good flow
+- [x] Some words are bolded
+- [x] Some words are italic
+- [x] Some words have a different color
+- [x] We aren't using a default font, cause it's not 2004
+- [x] Contrast is not too low
+- [x] Typographic hierachy is correct
+- [x] Text has a clear intro, middle, conclusion
+- [x] Intro, middle, conclusion is style correctly
+- [x] Headline font is a headline font
+- [x] Body text font is a body text font
+- [x] The text on the page has a good flow
 
 ### Style
 - [ ] Black is almost black but not #000
@@ -48,7 +48,8 @@
 
 ### Not everyone has free 4G aka speed matters
 - [ ] Pictures are not too heavy
-- [ ] Pictures are not pixelated
+        Too heavy
+- [x] Pictures are not pixelated
 
 ### A company wants to be found/SEO	
 - [ ] All the keywords this company wants to be found on are on the page 
@@ -58,11 +59,11 @@
 - [ ] Page loads fast
  
 ### Keep your workspace clean
-- [ ] No unused files in the repo
-- [ ] All files have a good, clear name
-- [ ] Good folder structure
-- [ ] The CSS folder does not have an image folder
-- [ ] Not too many files in the root folder 
+- [x] No unused files in the repo
+- [x] All files have a good, clear name
+- [x] Good folder structure
+- [x] The CSS folder does not have an image folder
+- [x] Not too many files in the root folder 
 
 ### Git(hub) is what you make it
 - [ ] All commits use the correct format (if applied this commit will...)
