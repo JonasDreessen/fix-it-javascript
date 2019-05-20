@@ -3,10 +3,10 @@
         Packages link in header does not work, footer social media buttons do not work
 - [x] All elements work and are complete (menu, lists, images, ...)
 - [x] Everything on the page has a function, a reason to be there
-- [ ] No dead links
-        Packages link in header does not work
-- [ ] English and dutch are not mixed
-        Spelling
+- [x] No dead links
+        
+- [x] English and dutch are not mixed
+       
 - [ ] No spelling errors
         Spelling and grammar errors in every section
 - [ ] No grammar errors
@@ -37,8 +37,8 @@
 - [x] The text on the page has a good flow
 
 ### Style
-- [ ] Black is almost black but not #000
-- [ ] White is almost white but not #fff
+- [x] Black is almost black but not #000
+- [x] White is almost white but not #fff
 - [x] The website is not an ugly color mess
 - [x] The styling is consistent
 - [x] It is not four totally different pages thrown together
