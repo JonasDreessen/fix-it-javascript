@@ -15,7 +15,6 @@
   - Pictures don't show in Safari browser.
   - "Strap on your Eagle pack" picture is not transparent.
   - Links don't have titles
-  - Images don't have titles of alternative description in case they aren't shown. 
 - [ ] Everything on the page has a function, a reason to be there
   - the 4 pictures of the jetpack speeders show the names of the teammembers, but why is that shown there?
 - [ ] No dead links
@@ -133,35 +132,41 @@
 - [ ] Monkey test
 
 ### Putting the antics back in semantics (but only for the html)
-- [ ] The html is semanticly correct
-- [ ] Navigation is in a nav
-- [ ] Lists use list tags
-- [ ] H tags are used to signal importance
+- [x] The html is semanticly correct
+  - <p> elements are used for every seperate sentance, while you could use just 1 <p> element and insert </br> for breaks.
+- [x] Navigation is in a nav
+- [x] Lists use list tags
+- [x] H tags are used to signal importance
 - [ ] No div is used where another element is available
 - [ ] No span is used where another element is available
-- [ ] No inline styling is put on any element
-- [ ] Id's are only used once
-- [ ] The same 'type' of elements have the same classes
+- [x] No inline styling is put on any element
+- [x] Id's are only used once
+- [x] The same 'type' of elements have the same classes
 - [ ] All images have an alt attribute and a title
+
 
 ### Just kidding CSS deserves some love too
 - [ ] CSS follows the DRY principle
-- [ ] The CSS does not contain conflicting selectors (multiple definition for the same class/id)
-- [ ] There is no use of !important where it can be avoided
+  - There are 3 parallax classes used, perhaps they could be defined in the same way in css so they have a consistent look and feel on the webpage? 
+- [x] The CSS does not contain conflicting selectors (multiple definition for the same class/id)
+- [x] There is no use of !important where it can be avoided
 - [ ] The page is responsive
+  - The google maps element disturbs the smartphone view. 
 
 
 ### Thermometer goes WHERE???
 - [ ] Your own style is included after the style of frameworks
-- [ ] Script tags are put at the end of the body or in the head with async/defer if possible
+  - Only Bulma colors and typography used. 
+- [x] Script tags are put at the end of the body or in the head with async/defer if possible
 
 
 ### Errors are to be avoided
-- [ ] No http resources are used on an https website
+- [x] No http resources are used on an https website
 - [ ] The console shows no errors
+  - In Chrome, the console shows 3 errors. 
 
 ## Learner added requirements
-- [ ] Use Animation/Transition
+- [x] Use Animation/Transition
 - [ ] Add a logo
-- [ ] Use an icon (font awesome,etc.)
+- [x] Use an icon (font awesome,etc.)
 
