@@ -106,7 +106,7 @@
 - [x] Lighthouse
         SEO very good, the rest not so good
 - [ ] W3C validator
-        Meta charset, meta name doubled. Euro sign € in the meta tag name. Div error class btn without quotation marks. Within nav tag there are open elements (line 86). Dropdown and navigation classes missing quotations. Title tag has to be in HEAD of document, not body. Bad values for href tags. Line 445 end tag with open elements (p tag has to end after 'a' closing tag). Line 471 there is an 'a' tag within an 'a' tag. 
+        Meta charset, meta name doubled. Euro sign € in the meta tag name. Div error class btn without quotation marks. Within nav tag there are open elements (line 86). Dropdown and navigation classes missing quotations. Title tag has to be in HEAD of document, not body. Bad values for href tags. Line 445 end tag with open elements (p tag has to end after 'a' closing tag). Line 471 & 484 there is an 'a' tag within an 'a' tag. Line 164 id tag not in quotations. Line 55 aria label has to go to existing class tag in document.
 - [ ] Monkey test
 
 ### Putting the antics back in semantics (but only for the html)
