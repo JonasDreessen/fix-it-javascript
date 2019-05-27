@@ -24,14 +24,17 @@
 ## Assessment
 
 You will do some peer evaluation. Every group will evaluate one other group using the checklist below.    
-**Your group will also need to add one requirement.**
+**Your group will also need to add at least one requirement.**
 
-## Adding your own requirement
+## Adding your own requirement(s)
 1. Change this file (directly on github or fork this repo)
-2. Add the requirement at the bottom
+2. Add the requirement(s) at the bottom
 3. Notify the group on ryver
 
-## Doing the evaultion
+## What makes a good requirement?
+A good requirement for this list is something that people should have been doing already and that we now explicitly write down. It should not be things that would be nice to have, but things that are essential for every self respecing website in <INSERT CURRENT YEAR>.
+
+## Doing the evaluation
 1. Create a file in this folder
 2. Copy the requirements below into it
 3. Tick the right boxes
@@ -56,6 +59,7 @@ You will do some peer evaluation. Every group will evaluate one other group usin
 - [ ] Google maps
 - [ ] Clickable email
 - [ ] A working form (you can use https://formspree.io)
+
 
 ### Text life matters aka typography is real
 - [ ] Some words are bolded
@@ -168,4 +172,7 @@ You will do some peer evaluation. Every group will evaluate one other group usin
 - [ ] The console shows no errors
 
 ## Learner added requirements
+- [ ] Use Animation/Transition
+- [ ] Add a logo
+- [ ] Use an icon (font awesome,etc.)
 
