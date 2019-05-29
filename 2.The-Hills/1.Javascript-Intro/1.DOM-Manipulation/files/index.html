@@ -42,14 +42,27 @@
             </p>
             <hr>
             <br>
-            <label for="greetingsBox">Type your message here: <input type="text" id="greetingsBox" class="form-control"/></label>
+            <label for="greetingsBox">Type your message here: <input type="text" id="greetingsBox" class="form-control" onchange="return returnValue()"/></label>
 
-            <div class="col-6 mx-auto p-2 greetingsBoxHolder">
+            <div class="col-6 mx-auto p-2 greetingsBoxHolder" id="greetingsBoxHolder">
                 <h3><!-- Your message comes here--></h3>
             </div>
         </div>
         <script>
-            // Write your code here
+            var str = returnValue;
+            var l = str.length;
+            var typedText = document.getElementById("greetingsBox");
+
+            function returnValue(){
+                document.getElementById("greetingsBoxHolder").innerHTML = typedText.value;
+
+                console.log(typedText.value);
+            }
+
+            console.log(returnValue);
+
+           
+
         </script>
     </div>
     <!-- END OF Part 1 -->
