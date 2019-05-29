@@ -49,17 +49,28 @@
             </div>
         </div>
         <script>
-            var str = returnValue;
-            var l = str.length;
+           
             var typedText = document.getElementById("greetingsBox");
 
             function returnValue(){
-                document.getElementById("greetingsBoxHolder").innerHTML = typedText.value;
+                var long = typedText.value;
+                var strlength = long.length;
+                console.log(strlength);
 
-                console.log(typedText.value);
+                if(strlength >= 1){
+
+                document.getElementById("greetingsBoxHolder").innerHTML = typedText.value;
+                
+                }else{
+                    document.getElementById("greetingsBoxHolder").innerHTML = "Type something in the box jonghe!";
+                }
+                
+                
             }
 
-            console.log(returnValue);
+            
+            
+            
 
            
 
