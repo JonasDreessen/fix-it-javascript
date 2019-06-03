@@ -181,41 +181,31 @@
                 <hr>
                 <br>
                 <button id="launchMe" class="btn btn-success play-button"><i class="fa fa-play"></i></button>
-                
-                <div id="hideMe">
-                <p id="listHolder">This is what you need to make delicious spaghetti: 
-                 <ul> 
-                    <li>Pasta</li>
-                    <li>Tomato Sauce</li>
-                    <li>Cheese</li>
-                    <li><input type="text" id="finalIngredient"  placeholder="Fill in your final ingredient"></li>
-                    </ul>
-                </p> 
-            </div>
-
-                <p id="listHolderFirst">This is what you need to make delicious spaghetti: 
-                        
-                          <span>Pasta</span> 
-                           <span>Tomato Sauce</span>
-                           <span>Cheese</span>
-                           <span><input type="text" placeholder="Fill in your final ingredient"></span>
-                       </p> 
+                <p id="listHolder">This is what you need to make delicious spaghetti:
+                    <span>Pasta</span><span>Tomato Sauce</span><span>Cheese</span><span>Choose your final
+                        ingredient</span></p>
 
                 <br>
                 <br>
 
             </div>
             <script>
-                document.getElementById("hideMe").style.display="none";
-                document.getElementById("launchMe").addEventListener("click", showTheList);
+                document.getElementById("launchMe").addEventListener("click", showMe);
 
-                function showTheList(){
-                    document.getElementById("hideMe").style.display="block";
-                    document.getElementById("listHolderFirst").style.display="none";
+                function showMe() {
+                    var info = document.getElementsByTagName('span');
+
+                    for (i = 0; i < info.length; i++) {
+                        var TempLi = '<li>' + info[i].innerHTML + '</li>';
+                        info[i].innerHTML = TempLi;
+
+                    }
                 }
-                
+
+                 
             </script>
         </div>
+
         <!-- END OF Part 3 -->
 
         <!-- Part 4: Interaction with inputs in combination with elements -->
@@ -466,6 +456,19 @@
 
                     element.parentNode.removeChild(element);
                 }
+
+                // create checkbox
+                var chkbox = document.createElement('input');
+                chkbox.type = "checkbox";
+                chkbox.id = "chk";
+                chkbox.name = "chk";
+
+                //add checkbox to td element
+                td.appendChild(chkbox);
+
+
+                // searchquery 
+                searchQuery()
             </script>
         </div>
         <!-- END OF Part 4 -->
