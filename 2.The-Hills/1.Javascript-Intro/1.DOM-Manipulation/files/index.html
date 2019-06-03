@@ -112,7 +112,8 @@
                     <tbody>
                         <tr id="emptyRow">
                             <td>
-                                <input type="text" id="name" class="form-control" placeholder="Fill in your name" onchange="formChecker()">
+                                <input type="text" id="name" value="jonas" class="form-control"
+                                    placeholder="Fill in your name" onchange="formChecker()">
                             </td>
 
                             <td>
@@ -121,39 +122,33 @@
                             </td>
 
                             <td>
-                                <input type="text" id="size" class="form-control"
-                                    placeholder="Fill in your chosen size" onchange="formChecker()">
+                                <input type="text" id="size" class="form-control" placeholder="Fill in your chosen size"
+                                    onchange="formChecker()">
                             </td>
                             <td>
-                                <input type="text" id="remarks" class="form-control" placeholder="Fill in your remarks" onchange="formChecker()">
+                                <input type="text" id="remarks" class="form-control" placeholder="Fill in your remarks"
+                                    onchange="formChecker()">
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <script>
-                var name = document.getElementById("name");
-                var pizza = document.getElementById("pizza");
-                var size = document.getElementById("size");
-                var remarks = document.getElementById("remarks");
-
-                var stringlengthname = name.length;
-                var stringlengthpizza = pizza.length;
-                var stringlengthsize = size.length;
-                var stringlengthremarks = remarks.length;
-
-                console.log(stringlengthsize);
-                console.log(stringlengthname);
-                console.log(stringlengthpizza);
-                console.log(stringlengthremarks);
-                
+                console.log(name);
 
 
-// function below does not work 
+
+                // function below does not work at a 
 
 
                 function formChecker() {
-                    if (stringlengthname > 0 && stringlengthpizza > 0 && stringlengthsize > 0) {
+
+                    var name = document.getElementById("name").value;
+                    var pizza = document.getElementById("pizza").value;
+                    var size = document.getElementById("size").value;
+                    var remarks = document.getElementById("remarks").value;
+
+                    if (name !== "" && pizza !== "" && size !== "") {
 
                         var table = document.getElementById("pizzaOrders");
                         var row = table.insertRow(1);
@@ -163,9 +158,7 @@
                         var cel4 = row.insertCell(3);
                         
 
-                        
-
-                    } else{
+                    } else {
                         alert("fill in all the areas");
                     }
                 }
