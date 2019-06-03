@@ -201,8 +201,6 @@
 
                     }
                 }
-
-                 
             </script>
         </div>
 
@@ -458,17 +456,20 @@
                 }
 
                 // create checkbox
+
+                //add checkbox to td element
+                // td.appendChild(chkbox);
+
+
+                // searchquery 
+                var searchTr = document.querySelectorAll("#searchTable tr");
+
                 var chkbox = document.createElement('input');
                 chkbox.type = "checkbox";
                 chkbox.id = "chk";
                 chkbox.name = "chk";
 
-                //add checkbox to td element
-                td.appendChild(chkbox);
-
-
-                // searchquery 
-                searchQuery()
+                searchTr.insertAdjacentHTML('beforeend', "chkbox");
             </script>
         </div>
         <!-- END OF Part 4 -->
