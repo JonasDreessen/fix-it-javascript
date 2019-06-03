@@ -112,34 +112,31 @@
                     <tbody>
                         <tr id="emptyRow">
                             <td>
-                                <input type="text" id="name" value="jonas" class="form-control"
-                                    placeholder="Fill in your name" onchange="formChecker()">
+                                <input type="text" id="name" class="form-control" placeholder="Fill in your name">
                             </td>
 
                             <td>
                                 <input type="text" id="pizza" class="form-control"
-                                    placeholder="Fill in your pizza choice" onchange="formChecker()">
+                                    placeholder="Fill in your pizza choice">
                             </td>
 
                             <td>
-                                <input type="text" id="size" class="form-control" placeholder="Fill in your chosen size"
-                                    onchange="formChecker()">
+                                <input type="text" id="size" class="form-control"
+                                    placeholder="Fill in your chosen size">
                             </td>
                             <td>
-                                <input type="text" id="remarks" class="form-control" placeholder="Fill in your remarks"
-                                    onchange="formChecker()">
+                                <input type="text" id="remarks" class="form-control" placeholder="Fill in your remarks">
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <script>
-                console.log(name);
-
-
-
-                // function below does not work at a 
-
+                document.getElementById("emptyRow").onkeypress = function (event) {
+                    if (event.keyCode == 13 || event.which == 13) {
+                        return formChecker();
+                    }
+                };
 
                 function formChecker() {
 
@@ -156,7 +153,7 @@
                         var cel2 = row.insertCell(1);
                         var cel3 = row.insertCell(2);
                         var cel4 = row.insertCell(3);
-                        
+
 
                     } else {
                         alert("fill in all the areas");
@@ -184,16 +181,39 @@
                 <hr>
                 <br>
                 <button id="launchMe" class="btn btn-success play-button"><i class="fa fa-play"></i></button>
-                <p id="listHolder">This is what you need to make delicious spaghetti:
-                    <span>Pasta</span><span>Tomato Sauce</span><span>Cheese</span><span>Choose your final
-                        ingredient</span></p>
+                
+                <div id="hideMe">
+                <p id="listHolder">This is what you need to make delicious spaghetti: 
+                 <ul> 
+                    <li>Pasta</li>
+                    <li>Tomato Sauce</li>
+                    <li>Cheese</li>
+                    <li><input type="text" id="finalIngredient"  placeholder="Fill in your final ingredient"></li>
+                    </ul>
+                </p> 
+            </div>
+
+                <p id="listHolderFirst">This is what you need to make delicious spaghetti: 
+                        
+                          <span>Pasta</span> 
+                           <span>Tomato Sauce</span>
+                           <span>Cheese</span>
+                           <span><input type="text" placeholder="Fill in your final ingredient"></span>
+                       </p> 
 
                 <br>
                 <br>
 
             </div>
             <script>
-                // Write your code here
+                document.getElementById("hideMe").style.display="none";
+                document.getElementById("launchMe").addEventListener("click", showTheList);
+
+                function showTheList(){
+                    document.getElementById("hideMe").style.display="block";
+                    document.getElementById("listHolderFirst").style.display="none";
+                }
+                
             </script>
         </div>
         <!-- END OF Part 3 -->
