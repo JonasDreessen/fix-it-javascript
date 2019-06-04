@@ -389,83 +389,34 @@
                 </table>
             </div>
             <script>
-                var targetTable = document.getElementById('searchTable');
-
-                document.getElementById('searchInput').addEventListener('keyup', function (event) {
-                    var searchString = event.target.value;
-                    highlightAndHideInTable(searchString, targetTable);
-                });
-
-                function highlightAndHideInTable(searchString, targetTable) {
-                    removeHighlighSpans(targetTable);
-                    hideRows(searchString, targetTable);
-                    highlightWords(searchString, targetTable);
-                }
-
-                function hideRows(searchString, targetTable) {
-                    // We start at 1 to skip the header row
-                    // Might be cleaner to check if we are in a thead or accept a flag, maybe we want to search the head as well?
-                    for (var k = 1; k < targetTable.rows.length; k++) {
-                        hideRow(searchString, targetTable.rows[k]);
-                    }
-                }
-
-                function hideRow(searchString, row) {
-                    // If the row does not contain the searchstring we add the hide class
-                    row.classList.toggle("hide", !rowContains(searchString, row));
-                }
-
-                function rowContains(searchString, row) {
-                    for (var k = 0; k < row.cells.length; k++)
-                        if (row.cells[k].innerHTML.indexOf(searchString) !== -1)
-                            return true;
-
-                    return false;
-                }
-
-                function highlightWords(searchString, targetTable) {
-                    for (var k = 0; k < targetTable.rows.length; k++) {
-                        highlightWordsInRow(searchString, targetTable.rows[k]);
-                    }
-                }
-
-                function highlightWordsInRow(searchString, row) {
-                    for (var k = 0; k < row.cells.length; k++) {
-                        highlightWordsInCell(searchString, row.cells[k]);
-                    }
-                }
-
-                function highlightWordsInCell(searchString, cell) {
-                    cell.innerHTML = cell.innerHTML.split(searchString).join("<span class='highlight'>" + searchString +
-                        "</span>");
-                }
-
-                // Can be sped up a bit by caching the queryselector
-                function removeHighlighSpans(table) {
-                    while (table.querySelector('.highlight')) {
-                        unwrap(table.querySelector('.highlight'));
-                    }
-                }
-
-                function unwrap(element) {
-                    while (element.firstChild) {
-                        element.parentNode.insertBefore(element.firstChild, element);
-                    }
-
-                    element.parentNode.removeChild(element);
-                }
-
-
-
                 // Get parent of checkbox
                 var searchTr = document.querySelectorAll("#searchTable tr");
                 // Create checkbox
-                var chkbox = document.createElement('input');
-                chkbox.type = "checkbox";
 
-                searchTr.appendChild(chkbox);
-                
-                
+
+
+                // add checkbox to parent
+                for (i = 1; i < searchTr.length; i++) {
+                    var chkbox = document.createElement("input");
+                    chkbox.type = "checkbox";
+                    chkbox.setAttribute("class", "chkbox");
+                    searchTr[i].appendChild(chkbox);
+                    chkbox.checked = true;
+                    chkbox.addEventListener("change", hideMe.bind(this, i));
+
+                    function hideMe(i) {
+                        searchTr[i].style.display = "none";
+
+                    }
+                }
+
+
+
+                /* if (document.getElementsByClassName("chkbox").checked = false){
+                     // searchTr[i].style.display = "none";
+
+                     console.log("hello");
+                 } */
             </script>
         </div>
         <!-- END OF Part 4 -->
@@ -482,7 +433,27 @@
                 <div id="moveAnimation" class="block"></div>
             </div>
             <script>
-                // Write your code here
+                var elem = document.getElementById("moveAnimation");
+                elem.addEventListener("click", movingImage);
+
+                function movingImage() {
+
+                    var startPosition = 0;
+                    var endPosition = 100;
+                    var id = setInterval(frameRight, 10);
+
+                    function frameRight() {
+                        if (startPosition >= 100) {
+                            clearInterval(id);
+
+                        } else {
+
+                            startPosition += 0.5;
+                            document.getElementById("moveAnimation").style.left = startPosition + "%";
+                        }
+                    }
+                    
+                }
             </script>
         </div>
         <!-- END OF Part 5 -->
