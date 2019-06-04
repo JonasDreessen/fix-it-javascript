@@ -455,21 +455,17 @@
                     element.parentNode.removeChild(element);
                 }
 
-                // create checkbox
-
-                //add checkbox to td element
-                // td.appendChild(chkbox);
 
 
-                // !!!!!!!!!!! searchquery NOT WORKING !!!!!!!!!!!!! 
+                // Get parent of checkbox
                 var searchTr = document.querySelectorAll("#searchTable tr");
-
+                // Create checkbox
                 var chkbox = document.createElement('input');
                 chkbox.type = "checkbox";
-                chkbox.id = "chk";
-                chkbox.name = "chk";
 
-                searchTr.insertAdjacentHTML('beforeend', "chkbox");
+                searchTr.appendChild(chkbox);
+                
+                
             </script>
         </div>
         <!-- END OF Part 4 -->
