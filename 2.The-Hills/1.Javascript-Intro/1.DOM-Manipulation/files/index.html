@@ -436,23 +436,50 @@
                 var elem = document.getElementById("moveAnimation");
                 elem.addEventListener("click", movingImage);
 
+
+
+                // function NOT WORKING
                 function movingImage() {
 
                     var startPosition = 0;
                     var endPosition = 100;
-                    var id = setInterval(frameRight, 10);
+                    var intervalRight = setInterval(frameRight, 10);
+                    var intervalLeft = setInterval(frameLeft, 10);
 
                     function frameRight() {
                         if (startPosition >= 100) {
-                            clearInterval(id);
+                            clearInterval(intervalRight);
+
+                            if(endPosition <= 0){
+                                clearInterval(intervalLeft)
+                            } else {
+                            function frameLeft(){
+
+                            endPosition --;
+                            document.getElementById("moveAnimation").style.right = endPosition + "%";
+                            } 
+                            }
 
                         } else {
 
                             startPosition += 0.5;
                             document.getElementById("moveAnimation").style.left = startPosition + "%";
-                        }
+                        }    
                     }
+
                     
+                    /* HERE IS THE SAME AS ABOVE BUT GOING LEFT (ish)
+
+                    function frameLeft() {
+                        if (endPosition >= 0) {
+                            clearInterval(intervalLeft);
+
+                        } else {
+
+                            endPosition += 0.5;
+                            document.getElementById("moveAnimation").style.right = endPosition + "%";
+                        }
+                    }*/ 
                 }
             </script>
         </div>
