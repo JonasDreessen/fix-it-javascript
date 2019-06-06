@@ -436,50 +436,49 @@
                 var elem = document.getElementById("moveAnimation");
                 elem.addEventListener("click", movingImage);
 
-
-
-                // function NOT WORKING
                 function movingImage() {
-
                     var startPosition = 0;
-                    var endPosition = 100;
                     var intervalRight = setInterval(frameRight, 10);
-                    var intervalLeft = setInterval(frameLeft, 10);
+                    var rightTimer = true;
+                    var leftTimer = false;
+                    var intervalLeft;
 
                     function frameRight() {
+                        if (!rightTimer) {
+                            rightTimer = true;
+                            intervalRight = setInterval(frameRight, 10)
+                            return;
+                        }
                         if (startPosition >= 100) {
+                            rightTimer = false;
                             clearInterval(intervalRight);
-
-                            if(endPosition <= 0){
-                                clearInterval(intervalLeft)
-                            } else {
-                            function frameLeft(){
-
-                            endPosition --;
-                            document.getElementById("moveAnimation").style.right = endPosition + "%";
-                            } 
-                            }
+                            frameLeft();
 
                         } else {
 
                             startPosition += 0.5;
                             document.getElementById("moveAnimation").style.left = startPosition + "%";
-                        }    
+                        }
+
                     }
 
-                    
-                    /* HERE IS THE SAME AS ABOVE BUT GOING LEFT (ish)
-
                     function frameLeft() {
-                        if (endPosition >= 0) {
+                        if (!leftTimer) {
+                            leftTimer = true;
+                            intervalLeft = setInterval(frameLeft, 10)
+                            return;
+                        }
+                        if (startPosition <= 0) {
+                            leftTimer = false;
                             clearInterval(intervalLeft);
+                            frameRight();
 
                         } else {
 
-                            endPosition += 0.5;
-                            document.getElementById("moveAnimation").style.right = endPosition + "%";
+                            startPosition -= 0.2;
+                            document.getElementById("moveAnimation").style.left = startPosition + "%";
                         }
-                    }*/ 
+                    }
                 }
             </script>
         </div>
@@ -497,7 +496,12 @@
                 <div id="followMouse" class="block"></div>
             </div>
             <script>
-                // Write your code here
+                var elem = document.getElementById('followMouse');
+                elem.addEventListener("mousemove", moveBich);
+
+                function moveBich() {
+                    elem.style.left = event.clientX + "px";
+                }
             </script>
         </div>
         <!-- END OF Part 6 -->
@@ -508,14 +512,19 @@
                 <h3>Part 7: Sliiiiiders</h3>
                 <p>Recreate this very intuitive user interface. Insert the DOM nodes (html elements) using
                     document.createElement();</p>
-                <img src="../input.gif" alt="Interface" />
+                <img src="./input.gif" alt="Interface" />
                 <hr />
                 <br />
 
                 <div id="target"></div>
             </div>
             <script>
-                // Write your code here
+                var elem = document.createElement("img");
+                elem.src = './input.gif';
+                //elem.setAttribute("height", "768");
+                //elem.setAttribute("width", "1024");
+                elem.setAttribute("alt", "gif");
+                document.getElementById("target").appendChild(elem);
             </script>
         </div>
         <!-- END OF Part 7 -->
