@@ -541,7 +541,9 @@
                 <div id="target2"></div>
             </div>
             <script>
-                // You can put at most one line here
+                let clone = document.querySelector('#target').cloneNode( true );
+                document.querySelector('#target2').appendChild( clone );
+
             </script>
         </div>
         <!-- END OF Part 8 -->
