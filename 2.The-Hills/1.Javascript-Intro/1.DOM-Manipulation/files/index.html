@@ -433,26 +433,21 @@
                 <div id="moveAnimation" class="block"></div>
             </div>
             <script>
+
+                // DEBUG FUN !! 
+                
                 var elem = document.getElementById("moveAnimation");
                 elem.addEventListener("click", movingImage);
 
                 function movingImage() {
                     var startPosition = 0;
                     var intervalRight = setInterval(frameRight, 10);
-                    var rightTimer = true;
-                    var leftTimer = false;
-                    var intervalLeft;
+                    
 
                     function frameRight() {
-                        if (!rightTimer) {
-                            rightTimer = true;
-                            intervalRight = setInterval(frameRight, 10)
-                            return;
-                        }
                         if (startPosition >= 100) {
-                            rightTimer = false;
                             clearInterval(intervalRight);
-                            frameLeft();
+                            setInterval(frameLeft,10);
 
                         } else {
 
@@ -463,15 +458,9 @@
                     }
 
                     function frameLeft() {
-                        if (!leftTimer) {
-                            leftTimer = true;
-                            intervalLeft = setInterval(frameLeft, 10)
-                            return;
-                        }
                         if (startPosition <= 0) {
-                            leftTimer = false;
-                            clearInterval(intervalLeft);
-                            frameRight();
+                            clearInterval(intervalRight);
+                            setInterval(frameRight,10);
 
                         } else {
 
