@@ -435,22 +435,25 @@
             <script>
 
                 // DEBUG FUN !! 
-                
+
                 var elem = document.getElementById("moveAnimation");
                 elem.addEventListener("click", movingImage);
 
                 function movingImage() {
                     var startPosition = 0;
-                    var intervalRight = setInterval(frameRight, 10);
+                    var intervalRight = setInterval(frameRight, 10); //1 
+                    
+                    
+                    
                     
 
                     function frameRight() {
                         if (startPosition >= 100) {
-                            clearInterval(intervalRight);
-                            setInterval(frameLeft,10);
+                             clearInterval(intervalRight);
+                             intervalLeft = setInterval(frameLeft,10);
+                             
 
                         } else {
-
                             startPosition += 0.5;
                             document.getElementById("moveAnimation").style.left = startPosition + "%";
                         }
@@ -459,11 +462,10 @@
 
                     function frameLeft() {
                         if (startPosition <= 0) {
-                            clearInterval(intervalRight);
-                            setInterval(frameRight,10);
+                            clearInterval(intervalLeft);
+                            intervalRight = setInterval(frameRight,10);
 
                         } else {
-
                             startPosition -= 0.2;
                             document.getElementById("moveAnimation").style.left = startPosition + "%";
                         }
