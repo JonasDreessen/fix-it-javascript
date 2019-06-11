@@ -529,15 +529,23 @@
                 // Creating the Alphabet Array 
                 
                 var allTheLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P",
-                    "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
-                ];
+                    "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+                var sliderParent = document.getElementById("target");
+                var createSlider = document.createElement("input");
+                var createTextInput = document.createElement("input");
+
+                // Creating Letter Inputfield 
+                createTextInput.type = "text";
+                createTextInput.style.display = "block";
+                sliderParent.appendChild(createTextInput);
+                // End Creating letter inputfield
 
                 // Creating button 
 
                 var button = document.createElement("button");
+                var sliderButtonId = document.getElementById("sliderButton");
                 button.style.display = "block";
                 button.id = "sliderButton";
-                var sliderButtonId = document.getElementById("sliderButton");
                 button.innerHTML = "Add new letter";
 
                 // End creating Button
@@ -545,8 +553,7 @@
 
                 // Creating slider and displaying it to the DOM
 
-                var sliderParent = document.getElementById("target");
-                var createSlider = document.createElement("input");
+                
                 createSlider.type = "range";
                 createSlider.style.display = "block";
                 createSlider.min = 0;
@@ -555,25 +562,16 @@
                 sliderParent.appendChild(createSlider);
                 sliderParent.appendChild(button);
 
-                // End Creating slider and displaying it to the DOM
-
-
-                // Creating Letter Inputfield 
-
-                var createTextInput = document.createElement("input");
-                createTextInput.type = "text";
-                createTextInput.style.display = "block";
-                sliderParent.appendChild(createTextInput);
-
-                // End Creating letter inputfield
+                
+                
 
 
                 // get Value of slider location
+
                 
-                var sliderResult = createSlider.value;
-                var theLetterIWant = allTheLetters[sliderResult];
                 
                 // End get value of slider location
+
 
                 // adding Eventlistner to clickbuttton
                 document.addEventListener('click', function (e) {
@@ -581,7 +579,9 @@
                         return newSlider();
                     }
                 }); 
-                
+                // End adding eventlistener to clickbutton
+
+                // Get the current value of the slider 
                 function getMySliderResults(){
                     var sliderResult = createSlider.value;
                     var theLetterIWant = allTheLetters[sliderResult];
@@ -589,15 +589,19 @@
 
                     }
                     
-
-                    // this should addevent to every input inside #target
                     
+                // End getting the current value of the slider
+
+                
+                // Add eventlistener to the change of the slider
+
                  document.addEventListener('change', function (event) {
                     if (event.target.querySelectorAll("#target > input")) {
                         return getMySliderResults();
                         
                     }
                 }); 
+                // End of adding eventlistener to the change of the slider
 
                 function newSlider() {
                     var sliderParent = document.getElementById("target");
