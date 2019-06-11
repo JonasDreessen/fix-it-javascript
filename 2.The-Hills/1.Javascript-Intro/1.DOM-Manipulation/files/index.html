@@ -528,7 +528,9 @@
             <script>
                 // Creating the Alphabet Array 
 
-                var allTheLetters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]; 
+                var allTheLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P",
+                    "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
+                ];
 
                 // Creating button 
                 var button = document.createElement("button");
@@ -538,22 +540,37 @@
                 button.innerHTML = "Add new letter";
                 // End creating Button
 
-                 // Creating slider and displaying it to the DOM
+                // Creating slider and displaying it to the DOM
                 var sliderParent = document.getElementById("target");
                 var createSlider = document.createElement("input");
                 createSlider.type = "range";
                 createSlider.min = 0;
-                createSlider.max = allTheLetters.length;
+                createSlider.max = allTheLetters.length - 1;
+                createSlider.defaultValue = 0;
                 sliderParent.appendChild(createSlider);
                 sliderParent.appendChild(button);
+
+                // get Value of slider location
+                var sliderResult = createSlider.value;
+                var theLetterIWant = allTheLetters[sliderResult];
+
+                console.log(theLetterIWant);
                 // End slidercreation
-                console.log(createSlider.value);
-                
+
 
                 function newSlider() {
                     var sliderParent = document.getElementById("target");
                     var createSlider = document.createElement("input");
                     createSlider.type = "range";
+                    createSlider.min = 0;
+                    createSlider.max = allTheLetters.length - 1;
+                    createSlider.defaultValue = 0;
+                    sliderParent.appendChild(createSlider);
+                    sliderParent.appendChild(button);
+
+                    // get Value of slider location
+                    var sliderResult = createSlider.value;
+                    var theLetterIWant = allTheLetters[sliderResult];
 
                 }
 
@@ -563,7 +580,7 @@
                     if (e.target && e.target.id == 'sliderButton') {
                         return newSlider();
                     }
-                }); */ 
+                }); */
 
 
                 // Duplicating slider.. 
