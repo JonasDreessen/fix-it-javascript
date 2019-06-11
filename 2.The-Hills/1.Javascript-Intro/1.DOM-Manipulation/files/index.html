@@ -542,11 +542,12 @@
                 var sliderParent = document.getElementById("target");
                 var createSlider = document.createElement("input");
                 createSlider.type = "range";
-                createSlider.list = allTheLetters;
+                createSlider.min = 0;
+                createSlider.max = allTheLetters.length;
                 sliderParent.appendChild(createSlider);
                 sliderParent.appendChild(button);
                 // End slidercreation
-                console.log(createSlider.list);
+                console.log(createSlider.value);
                 
 
                 function newSlider() {
