@@ -526,6 +526,62 @@
                 <div id="target"></div>
             </div>
             <script>
+                // LAURENS PRESENTATION SLIDER
+
+                Slider("target");
+                function Slider(target) {
+                    var Target = document.getElementById(target);
+                    var NameLabel = document.createElement('label');
+                    NameLabel.innerHTML = 'Enter your first name:'
+                    var ShowTextDiv = document.createElement('div');
+                    ShowTextDiv.style.border = '1px solid black';
+                    ShowTextDiv.style.marginBottom = "3%";
+                    Target.style.width = "25%";
+                    Target.appendChild(NameLabel);
+                    Target.appendChild(ShowTextDiv);
+                    ShowTextDiv.addEventListener("click", function() {
+                        if (ShowTextDiv.innerHTML != "") {
+                        } else {
+                            createslider();
+                        }
+                    })
+                    function createslider() {
+                        let LetterLabel = document.createElement('label');
+                        let Slider = document.createElement('input');
+                        let Button = document.createElement('button');
+                        let ButtonLength = document.getElementsByTagName('button').length;
+                        let spanLetter = document.createElement('span');
+                        ShowTextDiv.appendChild(spanLetter);
+                        Button.innerHTML = 'Add letter.';
+                        Button.style.display = 'block';
+                        Slider.type = 'range'
+                        Slider.style.display = 'inline';
+                        Slider.min = 65;
+                        Slider.max = 90;
+                        LetterLabel.style.display = 'inline';
+                        LetterLabel.style.marginRight = '10%'
+                        LetterLabel.style.width = '10%'
+                        Slider.style.width = '80%'
+                        Slider.oninput = function() {
+                            var Letter = String.fromCharCode(Slider.value)
+                            LetterLabel.innerHTML = Letter;
+                            spanLetter.innerHTML = Letter;
+                            return LetterLabel.innerHTML;
+                        }
+                        Target.appendChild(LetterLabel);
+                        Target.appendChild(Slider);
+                        Target.appendChild(Button);
+                        Button.addEventListener("click", function() {
+                            if (ButtonLength >= 1) {
+                                Target.removeChild(Button);
+                            }
+                            createslider();
+                        })
+                    }
+                }
+
+                // HERE UNDER IS MY OWN PROJECT TRYOUT 
+                /*
                 // Creating the Alphabet Array 
                 
                 var allTheLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P",
@@ -586,7 +642,9 @@
                     
                     var sliderResult = createSlider.value;
                     var theLetterIWant = allTheLetters[sliderResult];
+                    console.log(theLetterIWant);
                     return theLetterIWant;
+                    
 
                     }
                     
@@ -596,7 +654,7 @@
                 
                 // Add eventlistener to the change of the slider
 
-                 document.addEventListener('change', function (event) {
+                 document.addEventListener('change', function (event) { 
                     if (event.target.querySelectorAll("#target > input")) {
                         return getMySliderResults();
                         
